@@ -3,6 +3,7 @@ using System;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data.Migrations
 {
     [DbContext(typeof(ImageBankContext))]
-    partial class ImageBankContextModelSnapshot : ModelSnapshot
+    [Migration("20230521171851_InitialMigration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.5");
@@ -143,7 +146,7 @@ namespace API.Data.Migrations
 
                     b.HasIndex("KeywordsId");
 
-                    b.ToTable("ImageKeyword", (string)null);
+                    b.ToTable("ImageKeyword");
                 });
 
             modelBuilder.Entity("API.Entities.Image", b =>

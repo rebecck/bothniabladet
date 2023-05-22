@@ -1,13 +1,17 @@
-using System.ComponentModel.DataAnnotations.Schema;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace API.Entities
+namespace API.DTOs
 {
-    [Table("Images")]
-    public class Image
+    public class CreateImageDto
     {
-        public int Id { get; set; }
+        [Required]
         public string ImgName { get; set; }
-        public string FilePath { get; set; }  
+        public string FilePath { get; set; }
+        [Required]
         public string Description { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
         public int Longitude { get; set; }
@@ -20,14 +24,5 @@ namespace API.Entities
         public int FileSizeKB { get; set; }
         public double Resolution { get; set; }
         public string Camera { get; set; }
-
-        //FK
-        public List<Version> Versions { get; set; } = new List<Version>();
-        public List<Keyword> Keywords { get; set; }
-        public Category Category { get; set; }
-        
-        //public double Price { get; set; }  
-        //public string Type { get; set; }
-        //public int NumberOfVersions { get; set; }
     }
 }

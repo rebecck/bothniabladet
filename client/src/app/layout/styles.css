@@ -1,0 +1,77 @@
+/* Navbar */
+.log-in {
+    margin-left: 8px;
+}
+
+/* Home page*/
+.home-pic {
+    width: 80%;
+    margin-top: 5px;
+}
+
+/* About us*/
+.about-pic, .about-us {
+    max-width: 90%;
+}
+
+/* Contact us*/
+.contact-container {
+    margin-top: 20px;
+}
+
+/* Categories */
+.category-grid {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.card-row {
+    min-width: 80%;
+}
+
+.cat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addCat-btn {
+    margin: 20px;
+}
+
+/* Search */ 
+.search-grid {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-btn {
+    align-self: center;
+}
+
+.search-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-table {
+    margin-top: 20px;
+}
+
+.search-h1{
+    margin: 10px;
+}
+
+/*Add Image form*/
+.add-container {
+    margin-top: 20px;
+}
+.add-form {
+    margin: 2% 4% 4% 4%;
+}
+
+.add-btn{
+    margin-top: 10px;
+}

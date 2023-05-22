@@ -11,5 +11,8 @@ namespace API.Data
         }
 
         public DbSet<Image> Images { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Keyword> Keywords { get; set; }
+
     }
 }
